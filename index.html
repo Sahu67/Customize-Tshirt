@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable T-shirt</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Dhurjati&family=Kalnia:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="tshirt-div">
+        <img id="tshirt-backgroundpicture" src="images/tshirt.jpg" />
+
+        <div id="drawingArea" class="drawing-area focused">
+            <div class="canvas-container">
+                <canvas id="tshirt-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <button type="button" onclick="handleDesignDeletion();">Delete</button>
+    <br>
+    <label for="tshirt-design">T-Shirt Design:</label>
+    <select id="tshirt-design">
+        <option value="">Add Sticker</option>
+        <option value="images/batman.png">Batman</option>
+        <option value="images/shinchan.png">Shinchan</option>
+        <option value="images/gojo.jpg">Gojo</option>
+    </select>
+
+    <br><br>
+
+    <label for="tshirt-custompicture">Upload your own design:</label>
+    <input type="file" accept="image/*" id="tshirt-custompicture" />
+
+    <br><br><br>
+
+    <fieldset>
+        <legend><label for="custom-text">Add Custom Text</label></legend>
+        <form action="#" id="add-custom-text-form">
+            <textarea type="text" name="custom-text" id="custom-text" rows="5" cols="20" maxlength="30"
+                placeholder="text here..." oninput="showText(event);"></textarea>
+            <div class="text-shower hide"></div>
+            <br><br>
+            <select id="font-selector" title="Select Font" onchange="handleFontChange(event);">
+                <option value="Poppins">Poppins</option>
+                <option value="Kalnia">Kalnia</option>
+                <option value="Open Sans">Open Sans</option>
+                <option value="Rubik Bubbles">Rubik Bubbles</option>
+                <option value="Dhurjati">Dhurjati</option>
+                <option value="Dancing Script">Dancing Script</option>
+            </select>
+            <select id="font-color-selector" title="Select Font Color" onchange="handleFontColorChange(event);">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="purple">Purple</option>
+                <option value="tomato">Tomato</option>
+                <option value="cyan">Cyan</option>
+                <option value="orange">Orange</option>
+                <option value="blue">Blue</option>
+            </select>
+            <button type="submit">Add</button>
+        </form>
+    </fieldset>
+
+    <br><br>
+    <button id="download-btn" type="button">Download</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.3/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	padding: 40px 30px;
+}
+
+.drawing-area {
+  position: absolute;
+  top: 110px;
+  left: 139px;
+  z-index: 10;
+  width: 220px;
+  height: 320px;
+  box-sizing: border-box;
+}
+.drawing-area.focused {
+  border: 1px solid #ccc;
+}
+
+.canvas-container {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative;
+  user-select: none;
+}
+
+#tshirt-div {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  background-color: #fff;
+}
+
+select, button, textarea {
+	padding: 10px;
+}
+
+fieldset {
+  padding: 20px 40px;
+}
+
+.text-shower {
+  border: 1px solid purple;
+  margin: 20px 0 -30px;
+  padding: 20px 30px;
+}
+.text-shower.hide {
+  display: none;
+}
